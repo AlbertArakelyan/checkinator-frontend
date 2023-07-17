@@ -37,4 +37,7 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     'react/react-in-jsx-scope': 'off',
   },
-}; 
+  globals: {
+    ServiceWorkerGlobalScope: true,
+  },
+};
