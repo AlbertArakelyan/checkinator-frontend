@@ -1,0 +1,74 @@
+@import "../../../../../assets/styles/abstracts/mixins";
+
+
+.subscription-card {
+  color: var(--black);
+  @include border(all);
+  @include flex(column, flex-start, flex-start);
+  border-radius: 1rem;
+
+  &--primary {
+    border-color: var(--primary);
+  }
+
+  &--secondary {
+    border-color: var(--secondary);
+  }
+}
+.subscription-card__info {
+  padding: 2rem 1.5rem;
+  @include flex(column, flex-start, flex-start);
+  width: 100%;
+}
+.subscription-card__title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+
+  &--primary {
+    color: var(--primary);
+  }
+
+  &--secondary {
+    color: var(--secondary);
+  }
+}
+.subscription-card__details {
+  @include flex(column, flex-start, flex-start);
+  width: 100%;
+}
+.subscription-card__amount {
+  @include flex(row, flex-end, flex-start);
+  margin-bottom: 1rem;
+}
+.subscription-card__value {
+  margin-right: 0.5rem;
+  font-size: 3rem;
+  font-weight: 500;
+}
+.subscription-card__currency {
+  font-size: 1.25rem;
+}
+.subscription-card__frequency {
+  margin-bottom: 1.5rem;
+}
+.subscription-card__button {
+  width: 100%;
+}
+.subscription-card__features {
+  padding: 2rem 1.5rem;
+  @include flex(column, flex-start, flex-start);
+  width: 100%;
+}
+.subscription-card__feature {
+  @include border(top, var(--feature-item-border-color));
+  @include flex(row, center, flex-start);
+  width: 100%;
+  padding: 1rem 0;
+
+  &:first-child {
+    border-color: var(--black);
+  }
+}
+.subscription-card__feature-value {
+  margin-left: 0.5rem;
+}

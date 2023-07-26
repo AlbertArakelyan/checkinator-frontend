@@ -1,0 +1,16 @@
+@import "../../../../../../assets/styles/abstracts/mixins";
+
+
+.subscription-card-feature {
+  @include border(top, var(--feature-item-border-color));
+  @include flex(row, center, flex-start);
+  width: 100%;
+  padding: 1rem 0;
+
+  &:first-child {
+    border-color: var(--black);
+  }
+}
+.subscription-card-feature__value {
+  margin-left: 0.5rem;
+}
