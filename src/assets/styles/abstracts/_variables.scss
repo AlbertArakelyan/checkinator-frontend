@@ -1,0 +1,34 @@
+:root {
+  // Main colors
+  --primary: #184618;
+  --secondary: #ffcc00;
+
+  --primary-text-color: #010b01;
+
+  // Abstract color
+  --white: #ffffff;
+  --black: #000000;
+  --light-gray: #cdcdcd;
+
+  // Sense colors
+  --bg-color: #ffffff;
+  --border-color: #121212;
+  --box-shadow: 0 0 0.5rem -0.25rem #121212;
+}
+
+.App.dark {
+  // Main colors
+  --primary: #184618;
+  --secondary: #ffcc00;
+
+  --primary-text-color: #e4e7e4;
+
+  // Abstract color
+  --white: #000000;
+  --black: #ffffff;
+
+  // Sense color
+  --bg-color: #121212;
+  --border-color: #ffffff;
+  --box-shadow: 0 0 0.5rem -0.25rem #eeeeee;
+}

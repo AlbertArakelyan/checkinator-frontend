@@ -1,0 +1,17 @@
+@import "../../../assets/styles/abstracts/mixins";
+
+
+.avatar-container {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  // background-color: var(--light-gray);
+  @include flex(row, center, center);
+  @include border(all, var(--primary), 0.25rem);
+}
+.avatar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}

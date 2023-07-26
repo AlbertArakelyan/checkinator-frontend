@@ -1,0 +1,17 @@
+@import "../../../assets/styles/abstracts/mixins";
+
+
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 1rem 0;
+  box-shadow: var(--box-shadow);
+}
+.header-content {
+  @include flex(row, center, space-between);
+}
+.heaer__title {
+  font-size: 1.5rem;
+}
