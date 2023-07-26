@@ -1,0 +1,28 @@
+@mixin flex($direction: row, $align: stretch, $justify: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin border($side: all, $color: var(--border-color), $width: 0.0625rem, $type: solid) {
+  @if $side == all {
+    border: $type $width $color;
+  } @else if $side == horizontal {
+    border-left: $type $width $color;
+    border-right: $type $width $color;
+  } @else if $side == vertical {
+    border-top: $type $width $color;
+    border-bottom: $type $width $color;
+  } @else if $side == left {
+    border-left: $type $width $color;
+  } @else if $side == right {
+    border-right: $type $width $color;
+  } @else if $side == top {
+    border-top: $type $width $color;
+  } @else if $side == bottom {
+    border-bottom: $type $width $color;
+  } @else {
+    border: $type $width $color;
+  }
+}

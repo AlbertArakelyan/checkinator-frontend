@@ -23,3 +23,5 @@ jobs:
 #        run: yarn run build
       - name: lint code
         run: yarn lint
+      - name: run tests
+        run: yarn test
