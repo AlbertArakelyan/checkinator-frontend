@@ -1,13 +1,14 @@
 import { FC } from 'react';
 
 // Components
-import { UserAstronaout } from './icons';
+import { UserAstronaout, CheckMark } from './icons';
 
 // Types
 import { IIconProps } from './types';
 
 export const icons = {
   'user-astronaut': UserAstronaout,
+  'check-mark': CheckMark,
 };
 
 const Icon: FC<IIconProps> = ({ name, ...props }) => {

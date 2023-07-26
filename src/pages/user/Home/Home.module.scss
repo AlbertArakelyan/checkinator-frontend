@@ -1,0 +1,23 @@
+@import "../../../assets/styles/abstracts/mixins";
+
+
+.home {
+  padding: 1rem 0;
+}
+.home-content {
+  @include flex(column, center, flex-start);
+}
+.home__title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+.home__subscription-cards {
+  @include flex(row, stretch, space-between);
+  width: 100%;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.home__subscription-card {
+  width: calc(25% - 0.5rem);
+}
