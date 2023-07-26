@@ -1,13 +1,11 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import Header from '../Header';
 
 describe('Header', () => {
   it('should have one h1 logo', () => {
-    render(<Header />);
+    const { container } = render(<Header />);
 
-    const logo = screen.getAllByRole('heading');
-
-    expect(logo).toHaveLength(1);
+    expect(container.querySelectorAll('h1').length).toBe(1);
   });
 });

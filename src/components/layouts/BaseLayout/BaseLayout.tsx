@@ -6,12 +6,12 @@ import styles from './BaseLayout.module.scss';
 
 const BaseLayout = () => {
   return (
-    <div>
+    <>
       <Header />
       <main className={styles['main']}>
         <Outlet />
       </main>
-    </div>
+    </>
   );
 };
 
