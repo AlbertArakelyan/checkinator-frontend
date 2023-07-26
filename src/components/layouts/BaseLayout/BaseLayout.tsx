@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 
-import { Header } from 'components';
+import { Header } from './components/Header';
 
 import styles from './BaseLayout.module.scss';
 
