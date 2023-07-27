@@ -6,7 +6,7 @@ let container: HTMLElement;
 
 describe('BaseLayout', () => {
   beforeEach(() => {
-    container = render(<BaseLayout />).container;
+    container = render(<BaseLayout accessToken="albert" />).container;
   });
 
   it('should have 1 main tag inside', () => {
