@@ -1,7 +1,11 @@
+import useAppContainer from './useAppContainer';
+
 import App from './App';
 
 const AppContainer = () => {
-  return <App />;
+  const { theme } = useAppContainer();
+
+  return <App theme={theme} />;
 };
 
 export default AppContainer;
