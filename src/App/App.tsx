@@ -1,11 +1,15 @@
+import { FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import { Home } from 'pages';
+
 import { BaseLayout } from 'components';
 
-const App = () => {
+import { IAppProps } from './types';
+
+const App: FC<IAppProps> = ({ theme }) => {
   return (
-    <div className="App">
+    <div className={`App ${theme}`}>
       <Routes>
         <Route element={<BaseLayout />}>
           <Route path="/" element={<Home />} />
