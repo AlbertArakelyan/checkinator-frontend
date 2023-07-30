@@ -1,0 +1,13 @@
+@import "../../../../../assets//styles/abstracts/mixins";
+
+.login-suggesting {
+  @include flex(column, center, center);
+  min-height: calc(100vh - 4.5rem);
+}
+.login-suggesting__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.login-suggesting__button {
+  font-size: 1.5rem;
+}
