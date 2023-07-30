@@ -11,7 +11,7 @@
 
   &--primary {
     background-color: var(--primary);
-    color: var(--white);
+    color: var(--button-white);
 
     &:hover {
       background-color: var(--primary-light);
@@ -25,7 +25,7 @@
 
   &--secondary {
     background-color: var(--secondary);
-    color: var(--white);
+    color: var(--button-white);
 
     &:hover {
       background-color: var(--secondary-light);

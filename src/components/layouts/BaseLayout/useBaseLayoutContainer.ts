@@ -1,7 +1,7 @@
 import { IUseBaseLayoutContainerReturnData } from './types';
 
 const useBaseLayoutConainer = (): IUseBaseLayoutContainerReturnData => {
-  const accessToken = 'albert';
+  const accessToken = null;
 
   return {
     accessToken,

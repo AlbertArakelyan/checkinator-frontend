@@ -1,4 +1,4 @@
-type AccessTokenType = string | null;
+import { AccessTokenType } from 'types';
 
 export interface IUseBaseLayoutContainerReturnData {
   accessToken: AccessTokenType;
