@@ -36,6 +36,7 @@ module.exports = {
     'react/jsx-no-target-blank': 'off',
     'react/no-unescaped-entities': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/display-name': 'off',
   },
   globals: {
     ServiceWorkerGlobalScope: true,

@@ -1,0 +1,48 @@
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+.input {
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  background-color: var(--bf-color);
+  color: var(--primary-text-color);
+  @include border(all, var(--border-color), 0.06rem);
+
+  transition: box-shadow .3s ease-in-out, border-color .3s ease-in-out;
+
+  &--primary {
+
+    &:focus {
+      border-color: var(--primary);
+      @include focus-ring(var(--primary));
+    }
+  }
+
+  &--secondary {
+
+    &:focus {
+      border-color: var(--secondary);
+      @include focus-ring(var(--secondary));
+    }
+  }
+
+  // &--error {
+  //   border-color: $danger !important;
+    
+  //   &:focus {
+  //     @include focus-ring($danger);
+  //   }
+  // }
+}
+.input__error-message {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  color: red; // TODO: create danger variable and change with that
+  font-size: 0.625rem;
+}

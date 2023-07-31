@@ -26,3 +26,7 @@
     border: $type $width $color;
   }
 }
+
+@mixin focus-ring($color: $primary-light, $blur: 0) {
+  box-shadow: 0 0 $blur 0.125rem $color;
+}

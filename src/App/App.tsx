@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import { Home } from 'pages';
+import { Home, Auth } from 'pages';
 
-import { BaseLayout } from 'components';
+import { BaseLayout, AuthLayout } from 'components';
 
 import { IAppProps } from './types';
 
@@ -13,6 +13,9 @@ const App: FC<IAppProps> = ({ theme }) => {
       <Routes>
         <Route element={<BaseLayout />}>
           <Route path="/" element={<Home />} />
+        </Route>
+        <Route element={<AuthLayout />}>
+          <Route path="/auth" element={<Auth />} />
         </Route>
       </Routes>
     </div>

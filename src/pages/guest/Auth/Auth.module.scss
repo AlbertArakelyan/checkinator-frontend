@@ -1,0 +1,43 @@
+@import "../../../assets/styles/abstracts/mixins";
+
+
+.auth-form {
+  @include flex(column, center, flex-start);
+}
+.auth-form__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.auth-form__inputs {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.auth-form__form-group {
+  @include flex(column, flex-start, flex-start);
+  width: 100%;
+  
+  &:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+}
+.auth-form__label {
+  margin-bottom: 0.25rem;
+}
+.auth-form__controls {
+  width: 100%;
+  @include flex(column, flex-start, flex-start);
+}
+.auth-form__controls-main {
+  @include flex(row, center, flex-start);
+}
+.auth-form__controls-btn {
+  margin-right: 0.5rem;
+}
+.auth-form__controls-change-mode {
+  color: var(--link);
+  text-decoration: underline;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
