@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Button, Input } from 'components';
+import { Button, Input, Link } from 'components';
 
 import { IAuthProps } from './types';
 
@@ -55,6 +55,9 @@ const Auth: FC<IAuthProps> = ({
             {isSignUp ? 'Create account' : 'Log in'}
           </Button>
         </div>
+        <Link className={styles['auth-form__controls-forgot']} to="/forgot">
+          Forgot passoword?
+        </Link>
       </div>
     </form>
   );
