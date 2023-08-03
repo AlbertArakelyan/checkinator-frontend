@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import { Home, Auth, ForgotPassword } from 'pages';
+import { Home, Auth, ForgotPassword, ResetPassword, VerifyEmail } from 'pages';
 
 import { BaseLayout, AuthLayout } from 'components';
 
@@ -17,6 +17,8 @@ const App: FC<IAppProps> = ({ theme }) => {
         <Route element={<AuthLayout />}>
           <Route path="/auth" element={<Auth />} />
           <Route path="/forgot" element={<ForgotPassword />} />
+          <Route path="/reset/:token" element={<ResetPassword />} />
+          <Route path="/verify/:token" element={<VerifyEmail />} />
         </Route>
       </Routes>
     </div>
