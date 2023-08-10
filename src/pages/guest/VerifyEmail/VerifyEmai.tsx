@@ -7,7 +7,7 @@ import { IVerifyEmailProps } from './types';
 
 import styles from './VerifyEmail.module.scss';
 
-const VerifyEmail: FC<IVerifyEmailProps> = ({ isVerificationPassed, loading, error, showLogInLink }) => {
+const VerifyEmail: FC<IVerifyEmailProps> = ({ isVerificationPassed, loading, showLogInLink }) => {
   return (
     <div className={styles['verify-email']}>
       <h2 className={styles['verify-email__title']}>Verify Email</h2>

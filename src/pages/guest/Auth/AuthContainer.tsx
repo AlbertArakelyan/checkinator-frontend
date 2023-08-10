@@ -8,7 +8,6 @@ const AuthContainer = () => {
     handleFormSubmit,
     handleToggleIsSignUp,
     register,
-    unregister,
     handleSubmit,
     errors,
     verificationData,
