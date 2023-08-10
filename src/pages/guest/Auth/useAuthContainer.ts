@@ -1,12 +1,21 @@
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useAppDispatch, useAppSelector } from '../../../store';
 
 import { signInSchema, signUpSchema } from 'utils';
+
+import { signUp, signIn } from 'store/user/user.action';
+import { selectVerificationData, selectLoading } from 'store/user/user.selectors';
 
 import { IUserSignInData, IUserSignUpData } from 'types';
 
 const useAuthContainer = () => {
+  const dispatch = useAppDispatch();
+
+  const verificationData = useAppSelector(selectVerificationData);
+  const loading = useAppSelector(selectLoading);
+
   const [isSignUp, setIsSignUp] = useState(true);
 
   const {
@@ -25,10 +34,10 @@ const useAuthContainer = () => {
   const handleFormSubmit = (data: IUserSignInData | IUserSignUpData) => {
     if (isSignUp) {
       const sendData = data as IUserSignUpData;
-      console.log(sendData);
+      dispatch(signUp(sendData));
     } else {
       const sendData = data as IUserSignInData;
-      console.log(sendData);
+      dispatch(signIn(sendData));
     }
   };
 
@@ -48,9 +57,11 @@ const useAuthContainer = () => {
     errors,
     handleToggleIsSignUp,
     handleFormSubmit,
+    verificationData,
+    loading,
   };
 };
 
-export type UseAuthContainerType = ReturnType<typeof useAuthContainer>;
+export type UseAuthContainerType = Omit<ReturnType<typeof useAuthContainer>, 'unregister'>;
 
 export default useAuthContainer;

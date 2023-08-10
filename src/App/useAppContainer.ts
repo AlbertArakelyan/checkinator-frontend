@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useAppSelector, useAppDispatch } from 'store';
+import { useAppSelector, useAppDispatch } from '../store';
 
 import { changeTheme } from 'store/ui/ui.actions';
 
