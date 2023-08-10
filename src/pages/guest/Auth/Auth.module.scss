@@ -23,6 +23,10 @@
 .auth-form__label {
   margin-bottom: 0.25rem;
 }
+.auth-form__verification-data {
+  margin-bottom: 1rem;
+  text-align: center;
+}
 .auth-form__controls {
   width: 100%;
   @include flex(column, flex-start, flex-start);

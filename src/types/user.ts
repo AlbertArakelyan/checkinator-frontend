@@ -1,3 +1,11 @@
+export interface IUser {
+  id: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  role: string;
+}
+
 export interface IUserSignInData {
   email: string;
   password: string;

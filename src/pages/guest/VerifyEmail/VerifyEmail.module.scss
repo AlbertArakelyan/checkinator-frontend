@@ -1,0 +1,20 @@
+@import "../../../assets/styles/abstracts/mixins";
+
+
+.verify-email {
+  @include flex(column, center, flex-start);
+}
+.verify-email__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.verify-email__details {
+  @include flex(column, center, flex-start);
+}
+.verify-email__info {
+  margin-bottom: 0.5rem;
+}
+.verify-email__link {
+  color: var(--link);
+  text-decoration: underline;
+}

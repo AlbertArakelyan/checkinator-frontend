@@ -6,6 +6,14 @@
   font-size: inherit;
   transition: background-color .3s ease-in-out, box-shadow .3s ease-in-out;
 
+  &:disabled {
+    opacity: .7;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
   &:hover {
     cursor: pointer;
   }
@@ -15,12 +23,17 @@
     color: var(--button-white);
 
     &:hover {
-      background-color: var(--primary-light);
+      &:not(:disabled) {
+        background-color: var(--primary-light);
+      }
     }
 
     &:focus {
-      background-color: var(--primary-dark);
-      box-shadow: var(--box-shadow-primary);
+      &:not(:disabled) {
+        background-color: var(--primary-dark);
+        box-shadow: var(--box-shadow-primary);
+      }
+
     }
   }
 
@@ -29,12 +42,17 @@
     color: var(--button-white);
 
     &:hover {
-      background-color: var(--secondary-light);
+      &:not(:disabled) {
+        background-color: var(--secondary-light);
+      }
     }
 
     &:focus {
-      background-color: var(--secondary-dark);
-      box-shadow: var(--box-shadow-secondary);
+      &:not(:disabled) {
+        background-color: var(--secondary-dark);
+        box-shadow: var(--box-shadow-secondary);
+      }
+
     }
   }
 }

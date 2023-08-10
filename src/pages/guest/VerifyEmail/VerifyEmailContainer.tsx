@@ -1,7 +1,18 @@
 import VerifyEmail from './VerifyEmai';
 
+import useVerifyEmailContainer from './userVerifyEmailContainer';
+
 const VerifyEmailContainer = () => {
-  return <VerifyEmail />;
+  const { isVerificationPassed, loading, error, showLogInLink } = useVerifyEmailContainer();
+
+  return (
+    <VerifyEmail
+      isVerificationPassed={isVerificationPassed}
+      loading={loading}
+      error={error}
+      showLogInLink={showLogInLink}
+    />
+  );
 };
 
 export default VerifyEmailContainer;
