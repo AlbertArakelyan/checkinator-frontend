@@ -24,7 +24,7 @@ const SubscriptionCard: FC<ISubscriptionCardProps> = ({ variant, className = '',
           </div>
           <span className={styles['subscription-card__frequency']}>Billed monthly</span>
           <Button className={styles['subscription-card__button']} variant={variant}>
-            Acitvate
+            Activate
           </Button>
         </div>
       </div>

@@ -14,6 +14,14 @@
   &--secondary {
     border-color: var(--secondary);
   }
+
+  &--subscription-purple {
+    border-color: var(--subscription-purple);
+  }
+
+  &--subscription-blue {
+    border-color: var(--subscription-blue);
+  }
 }
 .subscription-card__info {
   padding: 2rem 1.5rem;

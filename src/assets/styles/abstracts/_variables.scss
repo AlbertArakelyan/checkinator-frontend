@@ -1,8 +1,8 @@
 :root {
   // Main colors
-  --primary-light: #307a30;
-  --primary: #184618;
-  --primary-dark: #0b300b;
+  --primary-light: #51aa51;
+  --primary: #307a30;
+  --primary-dark: #2a6a2a;
   
   --secondary-light: #ffe436;
   --secondary: #ffcc00;
@@ -24,10 +24,21 @@
   --button-white: #ffffff;
   --button-black: #000000;
 
+  // Inner colors
+  --subscription-purple: #818cf8;
+  --subscription-purple-light: #b3b9ff;
+  --subscription-purple-dark: #5e63ff;
+
+  --subscription-blue: #3b82f6;
+  --subscription-blue-light: #93c5fd;
+  --subscription-blue-dark: #0f4cfc;
+
   // Basic styles
   --box-shadow: 0 0 0.5rem -0.25rem #121212;
   --box-shadow-primary: 0 0 0.1rem 0.1rem var(--primary);
   --box-shadow-secondary: 0 0 0.1rem 0.1rem var(--secondary);
+  --box-shadow-subscription-purple: 0 0 0.1rem 0.1rem var(--subscription-purple);
+  --box-shadow-subscription-blue: 0 0 0.1rem 0.1rem var(--subscription-blue);
 }
 
 .App.dark {
@@ -39,7 +50,7 @@
   --black: #ffffff;
 
   // Sense color
-  --bg-color: #121212;
+  --bg-color: #1f1f1f;
   --border-color: #ffffff;
   --feature-item-border-color: #1e293b;
 

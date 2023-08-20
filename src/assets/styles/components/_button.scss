@@ -55,4 +55,40 @@
 
     }
   }
+
+  &--subscription-purple {
+    background-color: var(--subscription-purple);
+    color: var(--button-white);
+
+    &:hover {
+      &:not(:disabled) {
+        background-color: var(--subscription-purple-light);
+      }
+    }
+
+    &:focus {
+      &:not(:disabled) {
+        background-color: var(--subscription-purple-dark);
+        box-shadow: var(--box-shadow-subscription-purple);
+      }
+    }
+  }
+
+  &--subscription-blue {
+    background-color: var(--subscription-blue);
+    color: var(--button-white);
+
+    &:hover {
+      &:not(:disabled) {
+        background-color: var(--subscription-blue-light);
+      }
+    }
+
+    &:focus {
+      &:not(:disabled) {
+        background-color: var(--subscription-blue-dark);
+        box-shadow: var(--box-shadow-subscription-blue);
+      }
+    }
+  }
 }

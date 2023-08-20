@@ -1,4 +1,6 @@
-export type VariantType = 'primary' | 'secondary';
+type SubscriptionCardVariant = 'subscription-purple' | 'subscription-blue';
+
+export type VariantType = 'primary' | 'secondary' | SubscriptionCardVariant;
 
 export type ThemeType = 'light' | 'dark';
 
