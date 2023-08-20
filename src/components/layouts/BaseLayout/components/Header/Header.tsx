@@ -11,7 +11,13 @@ const Header: FC<IHeaderProps> = ({ accessToken }) => {
     <header className={styles['header']}>
       <Container>
         <div className={styles['header-content']}>
-          <h1 className={styles['heaer__title']}>Checkinator</h1>
+          {/*TODO: explore why Link is not working*/}
+          <div className={styles['header__logo']}>
+            <div className={styles['header__logo-image-wrapper']}>
+              <img className={styles['header__logo-image']} src="/images/logo.png" width={32} alt="Checkinator" />
+            </div>
+            <h1 className={styles['header__title']}>Checkinator</h1>
+          </div>
           <nav className={styles['header__nav']}>
             {accessToken ? <Avatar /> : <Button variant="secondary">Sign in</Button>}
           </nav>
