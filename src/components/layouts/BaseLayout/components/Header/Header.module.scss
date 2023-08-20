@@ -12,6 +12,17 @@
 .header-content {
   @include flex(row, center, space-between);
 }
-.heaer__title {
+.header__logo {
+  @include flex(row, center, flex-start);
+}
+.header__logo-image-wrapper {
+  width: 2rem;
+  margin-right: 1rem;
+}
+.header__logo-image {
+  width: 100%;
+  display: block;
+}
+.header__title {
   font-size: 1.5rem;
 }
