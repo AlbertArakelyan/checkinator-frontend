@@ -1,9 +1,9 @@
 import BaseLayout from './BaseLayout';
 
-import useBaseLayoutConainer from './useBaseLayoutContainer';
+import useBaseLayoutContainer from './useBaseLayoutContainer';
 
 const BaseLayoutContainer = () => {
-  const { accessToken } = useBaseLayoutConainer();
+  const { accessToken } = useBaseLayoutContainer();
 
   return <BaseLayout accessToken={accessToken} />;
 };

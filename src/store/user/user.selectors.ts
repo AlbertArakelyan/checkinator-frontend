@@ -8,3 +8,4 @@ export const selectVerificationData = createSelector(userState, ({ verificationD
 export const selectLoading = createSelector(userState, ({ loading }) => loading);
 export const selectIsVerificationPassed = createSelector(userState, ({ isVerificationPassed }) => isVerificationPassed);
 export const selectError = createSelector(userState, ({ error }) => error);
+export const selectAccessToken = createSelector(userState, ({ accessToken }) => accessToken);
