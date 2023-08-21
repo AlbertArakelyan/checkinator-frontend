@@ -10,10 +10,26 @@ const Home = () => {
         <div className={styles['home-content']}>
           <h2 className={styles['home__title']}>Choose your subscription</h2>
           <div className={styles['home__subscription-cards']}>
-            <SubscriptionCard variant="primary" className={styles['home__subscription-card']} />
-            <SubscriptionCard variant="secondary" className={styles['home__subscription-card']} />
-            <SubscriptionCard variant="subscription-purple" className={styles['home__subscription-card']} />
-            <SubscriptionCard variant="subscription-blue" className={styles['home__subscription-card']} />
+            <SubscriptionCard
+              variant="primary"
+              className={styles['home__subscription-card']}
+              data-testid="subscription-card"
+            />
+            <SubscriptionCard
+              variant="secondary"
+              className={styles['home__subscription-card']}
+              data-testid="subscription-card"
+            />
+            <SubscriptionCard
+              variant="subscription-purple"
+              className={styles['home__subscription-card']}
+              data-testid="subscription-card"
+            />
+            <SubscriptionCard
+              variant="subscription-blue"
+              className={styles['home__subscription-card']}
+              data-testid="subscription-card"
+            />
           </div>
         </div>
       </Container>
