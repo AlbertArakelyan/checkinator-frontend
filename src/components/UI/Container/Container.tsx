@@ -4,7 +4,7 @@ import { IContainerProps } from './types';
 
 const Container: FC<IContainerProps> = ({ children, fluid, className, ...props }) => {
   return (
-    <div className={`${fluid ? 'container' : 'container-fluid'} ${className}`} {...props}>
+    <div className={`${fluid ? 'container-fluid' : 'container'} ${className}`} {...props}>
       {children}
     </div>
   );
