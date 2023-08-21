@@ -5,7 +5,7 @@ import { IButtonProps } from './types';
 const Button: FC<IButtonProps> = ({ variant, className = '', children, isLoading, ...props }) => {
   return (
     <button
-      className={`base-button base-button--${variant} ${isLoading ? 'base-button--isLoading' : ''} ${className}`}
+      className={`base-button base-button--${variant} ${isLoading ? 'base-button--is-loading' : ''} ${className}`}
       {...props}
     >
       {children}
