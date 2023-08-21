@@ -24,31 +24,50 @@ const Auth: FC<IAuthProps> = ({
       <div className={styles['auth-form__inputs']}>
         {isSignUp && (
           <div className={styles['auth-form__form-group']}>
-            <label className={styles['auth-form__label']}>First Name</label>
-            <Input {...register('firstName')} error={(errors as FieldErrors<IUserSignUpData>).firstName?.message} />
+            <label className={styles['auth-form__label']} htmlFor="firstName">
+              First Name
+            </label>
+            <Input
+              {...register('firstName')}
+              error={(errors as FieldErrors<IUserSignUpData>).firstName?.message}
+              id="firstName"
+            />
           </div>
         )}
         {isSignUp && (
           <div className={styles['auth-form__form-group']}>
-            <label className={styles['auth-form__label']}>Last Name</label>
-            <Input {...register('lastName')} error={(errors as FieldErrors<IUserSignUpData>).lastName?.message} />
+            <label className={styles['auth-form__label']} htmlFor="lastName">
+              Last Name
+            </label>
+            <Input
+              {...register('lastName')}
+              error={(errors as FieldErrors<IUserSignUpData>).lastName?.message}
+              id="lastName"
+            />
           </div>
         )}
         <div className={styles['auth-form__form-group']}>
-          <label className={styles['auth-form__label']}>Email</label>
-          <Input type="email" {...register('email')} error={errors.email?.message} />
+          <label className={styles['auth-form__label']} htmlFor="email">
+            Email
+          </label>
+          <Input type="email" {...register('email')} error={errors.email?.message} id="email" />
         </div>
         <div className={styles['auth-form__form-group']}>
-          <label className={styles['auth-form__label']}>Password</label>
-          <Input type="password" {...register('password')} error={errors.password?.message} />
+          <label className={styles['auth-form__label']} htmlFor="password">
+            Password
+          </label>
+          <Input type="password" {...register('password')} error={errors.password?.message} id="password" />
         </div>
         {isSignUp && (
           <div className={styles['auth-form__form-group']}>
-            <label className={styles['auth-form__label']}>Confirm Password</label>
+            <label className={styles['auth-form__label']} htmlFor="confirmPassword">
+              Confirm Password
+            </label>
             <Input
               type="password"
               {...register('confirmPassword')}
               error={(errors as FieldErrors<IUserSignUpData>).confirmPassword?.message}
+              id="confirmPassword"
             />
           </div>
         )}
@@ -68,7 +87,7 @@ const Auth: FC<IAuthProps> = ({
           </Button>
         </div>
         <Link className={styles['auth-form__controls-forgot']} to="/forgot">
-          Forgot passoword?
+          Forgot password?
         </Link>
       </div>
     </form>

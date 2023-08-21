@@ -1,4 +1,4 @@
-import VerifyEmail from './VerifyEmai';
+import VerifyEmail from './VerifyEmail';
 
 import useVerifyEmailContainer from './userVerifyEmailContainer';
 
