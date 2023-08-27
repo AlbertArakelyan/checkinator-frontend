@@ -7,7 +7,15 @@ import { ISubscriptionCardProps } from './types';
 
 import styles from './SubscriptionCard.module.scss';
 
-const SubscriptionCard: FC<ISubscriptionCardProps> = ({ variant, className = '', ...props }) => {
+const SubscriptionCard: FC<ISubscriptionCardProps> = ({
+  variant,
+  className = '',
+  name,
+  id,
+  price,
+  plansItemsContent,
+  ...props
+}) => {
   return (
     <div
       className={`${styles['subscription-card']} ${styles[`subscription-card--${variant}`]} ${className}`}
@@ -15,11 +23,11 @@ const SubscriptionCard: FC<ISubscriptionCardProps> = ({ variant, className = '',
     >
       <div className={styles['subscription-card__info']}>
         <h3 className={`${styles['subscription-card__title']} ${styles[`subscription-card__title--${variant}`]}`}>
-          Basic Plan
+          {name} Plan
         </h3>
         <div className={styles['subscription-card__details']}>
           <div className={styles['subscription-card__amount']}>
-            <span className={styles['subscription-card__value']}>10$</span>
+            <span className={styles['subscription-card__value']}>{price}$</span>
             <span className={styles['subscription-card__currency']}>/ month</span>
           </div>
           <span className={styles['subscription-card__frequency']}>Billed monthly</span>
@@ -28,14 +36,7 @@ const SubscriptionCard: FC<ISubscriptionCardProps> = ({ variant, className = '',
           </Button>
         </div>
       </div>
-      <ul className={styles['subscription-card__features']}>
-        <SubscriptionCardFeature value="Happiness" />
-        <SubscriptionCardFeature value="Happiness" />
-        <SubscriptionCardFeature value="Happiness" />
-        <SubscriptionCardFeature value="Happiness" />
-        <SubscriptionCardFeature value="Happiness" />
-        <SubscriptionCardFeature value="Happiness" />
-      </ul>
+      <ul className={styles['subscription-card__features']}>{plansItemsContent}</ul>
     </div>
   );
 };
