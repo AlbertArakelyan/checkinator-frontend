@@ -1,4 +1,4 @@
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { act } from 'react-dom/test-utils';
 
@@ -38,7 +38,9 @@ describe('Auth', () => {
     });
 
     // Check if the form submission function was called
-    expect(mockHandleFormSubmit).toHaveBeenCalled();
+    await waitFor(() => {
+      expect(mockHandleFormSubmit).toHaveBeenCalled();
+    });
   });
 
   it('should work correctly for sign in', async () => {
@@ -69,7 +71,9 @@ describe('Auth', () => {
     });
 
     // Check if the form submission function was called
-    expect(mockHandleFormSubmit).toHaveBeenCalled();
+    await waitFor(() => {
+      expect(mockHandleFormSubmit).toHaveBeenCalled();
+    });
   });
 
   it('should contain link to forgot password', () => {
