@@ -1,4 +1,4 @@
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { act } from 'react-dom/test-utils';
 
@@ -8,6 +8,7 @@ import { mockAuthData } from 'tests/constants';
 
 describe('Auth', () => {
   it('should work correctly for sign up', async () => {
+    window.HTMLFormElement.prototype.submit = () => {};
     const mockHandleFormSubmit = jest.fn();
 
     const { getByLabelText, getByText } = render(
@@ -38,10 +39,14 @@ describe('Auth', () => {
     });
 
     // Check if the form submission function was called
-    expect(mockHandleFormSubmit).toHaveBeenCalled();
+    await waitFor(() => {
+      expect(mockHandleFormSubmit).toHaveBeenCalled();
+    });
   });
 
   it('should work correctly for sign in', async () => {
+    window.HTMLFormElement.prototype.submit = () => {};
+
     const mockHandleFormSubmit = jest.fn();
 
     const { getByLabelText, getByText } = render(
@@ -69,7 +74,9 @@ describe('Auth', () => {
     });
 
     // Check if the form submission function was called
-    expect(mockHandleFormSubmit).toHaveBeenCalled();
+    await waitFor(() => {
+      expect(mockHandleFormSubmit).toHaveBeenCalled();
+    });
   });
 
   it('should contain link to forgot password', () => {
