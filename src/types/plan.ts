@@ -10,7 +10,7 @@ export interface IPlan {
   name: string;
   price: number;
   planItems: IPlanItem[];
-  color: string;
+  color: string; // VariantType maybe
   created_at: string;
   updated_at: string;
 }
