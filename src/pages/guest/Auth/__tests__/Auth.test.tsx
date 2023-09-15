@@ -8,7 +8,6 @@ import { mockAuthData } from 'tests/constants';
 
 describe('Auth', () => {
   it('should work correctly for sign up', async () => {
-    window.HTMLFormElement.prototype.submit = () => {};
     const mockHandleFormSubmit = jest.fn();
 
     const { getByLabelText, getByText } = render(
@@ -45,8 +44,6 @@ describe('Auth', () => {
   });
 
   it('should work correctly for sign in', async () => {
-    window.HTMLFormElement.prototype.submit = () => {};
-
     const mockHandleFormSubmit = jest.fn();
 
     const { getByLabelText, getByText } = render(
