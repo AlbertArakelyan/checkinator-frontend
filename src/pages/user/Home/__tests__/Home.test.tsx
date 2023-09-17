@@ -1,17 +1,21 @@
 import { render, waitFor } from '@testing-library/react';
 
 import Home from '../Home';
-import { SubscriptionCard } from '../components/SubscriptionCard';
+import SubscriptionCard from '../components/SubscriptionCard/SubscriptionCard';
 
 import { mockPlansData } from 'tests/constants';
 
 import { VariantType } from 'types';
+import {SubscriptionCardFeature} from "../components/SubscriptionCard/components";
 
 let container: HTMLElement;
 let component: any;
 
 describe('Home', () => {
   beforeEach(() => {
+    const planItemsContent = mockPlansData[0].planItems.map((planItem) => {
+      return <SubscriptionCardFeature key={planItem._id} value={planItem.name} />;
+    });
     const plansListContent = mockPlansData.map((planItem) => {
       return (
         <SubscriptionCard
@@ -19,10 +23,11 @@ describe('Home', () => {
           key={planItem._id}
           id={planItem._id}
           variant={planItem.color as VariantType}
-          planItems={planItem.planItems}
+          plansItemsContent={planItemsContent}
           name={planItem.name}
           price={planItem.price}
           data-testid="subscription-card"
+          handleActivateClick={jest.fn()}
         />
       );
     });
