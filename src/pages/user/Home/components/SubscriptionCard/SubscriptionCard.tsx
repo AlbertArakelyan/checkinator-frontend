@@ -14,6 +14,7 @@ const SubscriptionCard: FC<ISubscriptionCardProps> = ({
   id,
   price,
   plansItemsContent,
+  handleActivateClick,
   ...props
 }) => {
   return (
@@ -31,7 +32,7 @@ const SubscriptionCard: FC<ISubscriptionCardProps> = ({
             <span className={styles['subscription-card__currency']}>/ month</span>
           </div>
           <span className={styles['subscription-card__frequency']}>Billed monthly</span>
-          <Button className={styles['subscription-card__button']} variant={variant}>
+          <Button className={styles['subscription-card__button']} variant={variant} onClick={handleActivateClick}>
             Activate
           </Button>
         </div>
