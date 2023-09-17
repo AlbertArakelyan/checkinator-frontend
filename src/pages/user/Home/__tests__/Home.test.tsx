@@ -1,12 +1,12 @@
 import { render, waitFor } from '@testing-library/react';
 
 import Home from '../Home';
+import { SubscriptionCardFeature } from '../components/SubscriptionCard/components';
 import SubscriptionCard from '../components/SubscriptionCard/SubscriptionCard';
 
 import { mockPlansData } from 'tests/constants';
 
 import { VariantType } from 'types';
-import { SubscriptionCardFeature } from '../components/SubscriptionCard/components';
 
 let container: HTMLElement;
 let component: any;
