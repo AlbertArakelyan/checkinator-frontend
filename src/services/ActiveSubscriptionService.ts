@@ -12,6 +12,10 @@ class ActiveSubscriptionService extends Service {
   static createActiveSubscription<T, D>(data: D) {
     return request<IResponseData<T>>('POST', 'active-subscription', data);
   }
+
+  static getCurrentActiveSubscription<T>() {
+    return request<IResponseData<T>>('GET', 'active-subscription');
+  }
 }
 
 export default ActiveSubscriptionService;

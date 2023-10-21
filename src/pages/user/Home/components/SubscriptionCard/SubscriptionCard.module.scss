@@ -9,18 +9,38 @@
 
   &--primary {
     border-color: var(--primary);
+
+    &-active {
+      box-shadow: var(--box-shadow-primary);
+      background-color: var(--primary-dark);
+    }
   }
 
   &--secondary {
     border-color: var(--secondary);
+
+    &-active {
+      box-shadow: var(--box-shadow-secondary);
+      background-color: var(--secondary-dark);
+    }
   }
 
   &--subscription-purple {
     border-color: var(--subscription-purple);
+
+    &-active {
+      box-shadow: var(--box-shadow-subscription-purple);
+      background-color: var(--subscription-purple-dark);
+    }
   }
 
   &--subscription-blue {
     border-color: var(--subscription-blue);
+
+    &-active {
+      box-shadow: var(--box-shadow-subscription-blue);
+      background-color: var(--subscription-blue-dark);
+    }
   }
 }
 .subscription-card__info {

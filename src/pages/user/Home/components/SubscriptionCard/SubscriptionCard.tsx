@@ -1,7 +1,8 @@
 import { FC } from 'react';
 
 import { Button } from 'components';
-import { SubscriptionCardFeature } from './components';
+
+import { ActiveSubscriptionAction } from 'constants/activeSubscription';
 
 import { ISubscriptionCardProps } from './types';
 
@@ -15,11 +16,15 @@ const SubscriptionCard: FC<ISubscriptionCardProps> = ({
   price,
   plansItemsContent,
   handleActivateClick,
+  isActive,
+  activeSubscriptionAction,
   ...props
 }) => {
   return (
     <div
-      className={`${styles['subscription-card']} ${styles[`subscription-card--${variant}`]} ${className}`}
+      className={`${styles['subscription-card']} ${styles[`subscription-card--${variant}`]} ${
+        isActive ? styles[`subscription-card--${variant}-active`] : ''
+      } ${className}`}
       {...props}
     >
       <div className={styles['subscription-card__info']}>
@@ -33,7 +38,11 @@ const SubscriptionCard: FC<ISubscriptionCardProps> = ({
           </div>
           <span className={styles['subscription-card__frequency']}>Billed monthly</span>
           <Button className={styles['subscription-card__button']} variant={variant} onClick={handleActivateClick}>
-            Activate
+            {!activeSubscriptionAction
+              ? 'Activate'
+              : activeSubscriptionAction === ActiveSubscriptionAction.UPGRADE
+              ? 'Upgrade'
+              : 'Downgrade'}
           </Button>
         </div>
       </div>

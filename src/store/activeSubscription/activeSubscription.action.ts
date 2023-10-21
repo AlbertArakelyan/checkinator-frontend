@@ -4,11 +4,19 @@ import ActiveSubscriptionService from 'services/ActiveSubscriptionService';
 
 import { getStripe } from 'lib/stripe';
 
-import { CREATE_CHECKOUT_SESSION, CREATE_ACTIVE_SUBSCRIPTION } from './activeSubscription.actionTypes';
+import {
+  CREATE_CHECKOUT_SESSION,
+  CREATE_ACTIVE_SUBSCRIPTION,
+  GET_CURRENT_ACTIVE_SUBSCRIPTION,
+} from './activeSubscription.actionTypes';
 
 import { globalMessages } from '../../constants';
 
-import { ICreateCheckoutSessionPayloadData, ICreateActiveSubscriptionPayloadData } from './types';
+import {
+  ICreateCheckoutSessionPayloadData,
+  ICreateActiveSubscriptionPayloadData,
+  IGetCurrentActiveSubscriptionReturnData,
+} from './types';
 
 export const createCheckoutSession = createAsyncThunk<any, ICreateCheckoutSessionPayloadData>(
   CREATE_CHECKOUT_SESSION,
@@ -43,6 +51,25 @@ export const createActiveSubscription = createAsyncThunk<any, ICreateActiveSubsc
         any,
         ICreateActiveSubscriptionPayloadData
       >(data);
+
+      if (!response.data?.success) {
+        throw new Error(response.data.message || globalMessages.smthWentWrong);
+      }
+
+      return response.data.data;
+    } catch (error: any) {
+      console.log(error);
+      throw error;
+    }
+  }
+);
+
+export const getCurrentActiveSubscription = createAsyncThunk<IGetCurrentActiveSubscriptionReturnData>(
+  GET_CURRENT_ACTIVE_SUBSCRIPTION,
+  async () => {
+    try {
+      const response =
+        await ActiveSubscriptionService.getCurrentActiveSubscription<IGetCurrentActiveSubscriptionReturnData>();
 
       if (!response.data?.success) {
         throw new Error(response.data.message || globalMessages.smthWentWrong);

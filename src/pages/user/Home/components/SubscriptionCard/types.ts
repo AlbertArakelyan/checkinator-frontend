@@ -1,7 +1,8 @@
 import React, { HTMLAttributes } from 'react';
 
+import { ActiveSubscriptionAction } from 'constants/activeSubscription';
+
 import { VariantType, IPlanItem } from 'types';
-import { UseSubscriptionCardType } from './useSubscriptionCardContainer';
 
 export interface ISubscriptionCardContainerProps extends HTMLAttributes<HTMLDivElement> {
   variant: VariantType;
@@ -9,6 +10,8 @@ export interface ISubscriptionCardContainerProps extends HTMLAttributes<HTMLDivE
   name: string;
   price: number;
   planItems: IPlanItem[];
+  isActive: boolean;
+  activeSubscriptionAction?: ActiveSubscriptionAction;
 }
 
 export interface ISubscriptionCardProps extends Omit<ISubscriptionCardContainerProps, 'planItems'> {

@@ -7,7 +7,13 @@ import useSubscriptionCardContainer from './useSubscriptionCardContainer';
 
 import { ISubscriptionCardContainerProps } from './types';
 
-const SubscriptionCardContainer: FC<ISubscriptionCardContainerProps> = ({ variant, planItems, ...props }) => {
+const SubscriptionCardContainer: FC<ISubscriptionCardContainerProps> = ({
+  variant,
+  planItems,
+  isActive,
+  activeSubscriptionAction,
+  ...props
+}) => {
   const { handleActivateClick } = useSubscriptionCardContainer();
 
   const planItemsContent = planItems.map((planItem) => {
@@ -27,6 +33,8 @@ const SubscriptionCardContainer: FC<ISubscriptionCardContainerProps> = ({ varian
       variant={variant}
       plansItemsContent={planItemsContent}
       handleActivateClick={handleClick}
+      isActive={isActive}
+      activeSubscriptionAction={activeSubscriptionAction}
       {...props}
     />
   );
