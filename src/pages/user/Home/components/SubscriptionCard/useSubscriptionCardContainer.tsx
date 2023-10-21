@@ -1,4 +1,4 @@
-import { useAppDispatch } from '../../../../../store';
+import { useAppDispatch, useAppSelector } from '../../../../../store';
 
 import { createCheckoutSession } from 'store/activeSubscription/activeSubscription.action';
 
@@ -16,6 +16,6 @@ const useSubscriptionCardContainer = () => {
   };
 };
 
-export type UseSubscriptionCardType = ReturnType<typeof useSubscriptionCardContainer>;
+export type UseSubscriptionCardContainerType = ReturnType<typeof useSubscriptionCardContainer>;
 
 export default useSubscriptionCardContainer;

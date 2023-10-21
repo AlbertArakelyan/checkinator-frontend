@@ -27,6 +27,8 @@ describe('Home', () => {
           name={planItem.name}
           price={planItem.price}
           data-testid="subscription-card"
+          // TODO: make dynamic
+          isActive={false}
           handleActivateClick={jest.fn()}
         />
       );
